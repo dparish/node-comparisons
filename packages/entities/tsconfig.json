@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "outDir": "dist",
+    "declarationDir": "dist"
+  },
+  "exclude": ["dist"]
+}

@@ -1,0 +1,42 @@
+{
+   "name": "entities",
+   "version": "0.0.1",
+   "description": "Subjectwell Atana Entities",
+   "private": true,
+   "type": "module",
+   "main": "dist/index.js",
+   "exports": {
+      "./index": {
+         "import": "./dist/index.js",
+         "require": "./dist/index.cjs"
+      }
+   },
+   "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "lint": "eslint src",
+      "lint:fix": "eslint --fix src",
+      "preview": "vite preview",
+      "test": "vitest run",
+      "test:watch": "vitest",
+      "coverage": "vitest run --coverage"
+   },
+   "devDependencies": {
+      "@rollup/plugin-typescript": "^8.3.4",
+      "@types/node": "^18.7.9",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-prettier": "^4.2.1",
+      "prettier": "^2.7.1",
+      "tslib": "^2.4.0",
+      "@typescript-eslint/eslint-plugin": "^5.35.1",
+      "@typescript-eslint/parser": "^5.35.1",
+      "eslint": "^8.23.0",
+      "typescript": "^4.6.4",
+      "vite": "^4.1.0",
+      "vite-plugin-eslint": "^1.8.1",
+      "vitest": "^0.28.1"
+   },
+   "dependencies": {
+      "typeorm": "0.3.12"
+   }
+}
