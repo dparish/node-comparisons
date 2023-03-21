@@ -5,11 +5,11 @@
    "private": true,
    "type": "module",
    "exports": {
-     "import": "./dist/index.js",
-     "require": "./dist/index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
    },
-  "types": "./dist/index.d.ts",
-  "scripts": {
+   "types": "./dist/index.d.ts",
+   "scripts": {
       "dev": "vite",
       "build": "tsc && vite build",
       "lint": "eslint src",
@@ -22,19 +22,20 @@
    "devDependencies": {
       "@rollup/plugin-typescript": "^8.3.4",
       "@types/node": "^18.7.9",
+      "@typescript-eslint/eslint-plugin": "^5.35.1",
+      "@typescript-eslint/parser": "^5.35.1",
+      "eslint": "^8.23.0",
       "eslint-config-prettier": "^8.5.0",
       "eslint-plugin-prettier": "^4.2.1",
       "prettier": "^2.7.1",
       "tslib": "^2.4.0",
-      "@typescript-eslint/eslint-plugin": "^5.35.1",
-      "@typescript-eslint/parser": "^5.35.1",
-      "eslint": "^8.23.0",
       "typescript": "^4.6.4",
       "vite": "^4.1.0",
       "vite-plugin-eslint": "^1.8.1",
       "vitest": "^0.28.1"
    },
    "dependencies": {
-      "typeorm": "0.3.12"
+      "typeorm": "0.3.12",
+      "typeorm-naming-strategies": "^4.1.0"
    }
 }

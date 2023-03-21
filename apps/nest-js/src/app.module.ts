@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './controllers/app.controller';
 import { AppService } from './services/app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
-import {Author} from "entities";
+import {Author, SubjectwellNamingStrategy} from "entities";
 import {AuthorController} from "./controllers/author.controller";
 import {AuthorService} from "./services/author.service";
 
@@ -16,6 +16,7 @@ import {AuthorService} from "./services/author.service";
       database: 'books',
       entities: [Author],
       synchronize: false,
+      namingStrategy: new SubjectwellNamingStrategy()
     }),
     TypeOrmModule.forFeature([Author])
   ],
