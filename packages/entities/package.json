@@ -4,14 +4,12 @@
    "description": "Subjectwell Atana Entities",
    "private": true,
    "type": "module",
-   "main": "dist/index.js",
    "exports": {
-      "./index": {
-         "import": "./dist/index.js",
-         "require": "./dist/index.cjs"
-      }
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
    },
-   "scripts": {
+  "types": "./dist/index.d.ts",
+  "scripts": {
       "dev": "vite",
       "build": "tsc && vite build",
       "lint": "eslint src",
