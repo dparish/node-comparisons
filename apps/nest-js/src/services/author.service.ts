@@ -1,16 +1,14 @@
 import {Injectable} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
-import {Author} from "entities";
+import {Author, EntityService} from "entities";
 import {Repository} from "typeorm";
 
 @Injectable()
-export class AuthorService {
+export class AuthorService extends EntityService<Author>{
   constructor(
     @InjectRepository(Author)
-    private authorRepository: Repository<Author>
-  ) {}
-
-  findAll(): Promise<Author[]> {
-    return this.authorRepository.find();
+    authorRepository: Repository<Author>
+  ) {
+    super(authorRepository)
   }
 }
