@@ -1,4 +1,4 @@
-import {ObjectLiteral, Repository} from "typeorm";
+import { ObjectLiteral, Repository } from "typeorm";
 
 export class EntityService<T extends ObjectLiteral> {
   constructor(private repository: Repository<T>) {}
