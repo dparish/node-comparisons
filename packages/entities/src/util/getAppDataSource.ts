@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import {Author} from "../entity/Author";
+import { Author } from "../entity/Author";
 
 export function getAppDataSource(
   database: string,
