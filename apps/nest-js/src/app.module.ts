@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './controllers/app.controller';
-import { AppService } from './services/app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Author, SubjectwellNamingStrategy } from 'entities';
 import { AuthorController } from './controllers/author.controller';
@@ -20,7 +18,7 @@ import { AuthorService } from './services/author.service';
     }),
     TypeOrmModule.forFeature([Author]),
   ],
-  controllers: [AppController, AuthorController],
-  providers: [AppService, AuthorService],
+  controllers: [AuthorController],
+  providers: [AuthorService],
 })
 export class AppModule {}
